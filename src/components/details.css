@@ -1,0 +1,247 @@
+
+#product-info {
+    display: flex;
+    width: min(1200px, 92%);
+    margin: 40px auto 60px;
+    gap: 38px;
+    align-items: flex-start;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.item-image-parent {
+    flex: 1.1;
+    display: flex;
+    gap: 18px;
+    padding: 20px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8fb 100%);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.item-info-parent {
+    flex: 0.9;
+    padding: 24px 20px;
+}
+
+.item-list-vertical {
+    width: 88px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.item-image-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+    background: #f5f5f7;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.thumb-box {
+    width: 74px;
+    height: 74px;
+    margin: 0;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.item-image-main img {
+    width: 90%;
+    height: 100%;
+    max-height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+.thumb-box:hover {
+    cursor: pointer;
+    border-color: #ff7b2d;
+    box-shadow: 0 10px 18px rgba(255, 123, 45, 0.18);
+    transform: translateY(-2px);
+}
+
+.main-info h4 {
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+    margin: 12px 0 10px;
+    color: #111827;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.product-badge {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    background: #fff3eb;
+    color: #db6d2d;
+}
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #374151;
+    font-size: 1.1rem;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #ececf0;
+    margin-bottom: 16px;
+}
+
+.star-rating span {
+    color: #f5b301;
+    letter-spacing: 2px;
+}
+
+.star-rating small {
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.main-info p {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 28px;
+}
+
+#price {
+    color: #b42318;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 800;
+}
+
+.select-items {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.change-color,
+.change-size,
+.description {
+    background: #fff;
+    border: 1px solid #edf0f2;
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.change-color label,
+.change-size label {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 0.98rem;
+    color: #374151;
+}
+
+.change-color .thumb-box {
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    margin-right: 10px;
+}
+
+.change-size select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    color: #111827;
+}
+
+.purchase-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.primary-btn,
+.secondary-btn {
+    border: none;
+    border-radius: 12px;
+    padding: 14px 22px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #ff7a18 0%, #ff4d4d 100%);
+    color: #fff;
+    box-shadow: 0 12px 22px rgba(255, 122, 24, 0.28);
+}
+
+.secondary-btn {
+    background: #111827;
+    color: #fff;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-1px);
+}
+
+.description p {
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.description ul {
+    padding-left: 18px;
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.8;
+    color: #374151;
+}
+
+@media (max-width: 900px) {
+    #product-info {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .item-image-parent,
+    .item-info-parent {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .item-image-parent {
+        flex-direction: column;
+    }
+
+    .item-list-vertical {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .thumb-box {
+        width: 64px;
+        height: 64px;
+    }
+}
+
